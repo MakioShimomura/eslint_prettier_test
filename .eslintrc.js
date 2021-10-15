@@ -4,6 +4,7 @@ module.exports = {
     es6: true,
     node: true, // require を使う時は追加
   },
+  plugins: ['eslint-plugin-html'],
   extends: [
     // extends は後から追加した方のルールが優先される
     'eslint:recommended',

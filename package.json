@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "format": "run-p lint:js:fix lint:css:fix",
-    "lint:html:fix": "npx prettier '*.html'",
+    "lint:html:fix": "npx prettier --write *.html",
     "lint:js": "eslint '*.{js,ts,jsx,tsx}'",
     "lint:js:fix": "eslint --fix '*.{js,ts,jsx,tsx}'",
     "lint:css": "prettier-stylelint-formatter '*.{css,scss}'",
@@ -21,6 +21,7 @@
   "devDependencies": {
     "eslint": "^8.0.1",
     "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-html": "^6.2.0",
     "eslint-plugin-prettier": "^4.0.0",
     "husky": "^7.0.2",
     "lint-staged": "^11.2.3",
