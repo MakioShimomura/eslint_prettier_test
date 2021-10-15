@@ -6,15 +6,17 @@
   "license": "MIT",
   "scripts": {
     "format": "run-p lint:js:fix lint:css:fix",
+    "lint:html:fix": "npx prettier '*.html'",
     "lint:js": "eslint '*.{js,ts,jsx,tsx}'",
     "lint:js:fix": "eslint --fix '*.{js,ts,jsx,tsx}'",
     "lint:css": "prettier-stylelint-formatter '*.{css,scss}'",
-    "lint:css:fix": "prettier-stylelint-formatter --quiet --write '*.{html,css,scss}'",
+    "lint:css:fix": "prettier-stylelint-formatter --quiet --write '*.{css,scss}'",
     "prepare": "husky install"
   },
   "lint-staged": {
     "*.{js,jsx}": "npm run lint:js:fix",
-    "*.{html,css,scss}": "npm run lint:css:fix"
+    "*.{css,scss}": "npm run lint:css:fix",
+    "*.html": "npm run lint:html:fix"
   },
   "devDependencies": {
     "eslint": "^8.0.1",
