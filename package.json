@@ -12,11 +12,6 @@
     "lint:css:fix": "prettier-stylelint-formatter --quiet --write '*.{css,scss}'",
     "prepare": "husky install"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "echo 'from husky'"
-    }
-  },
   "lint-staged": {
     "*.{js,jsx}": "npm run lint:js:fix",
     "*.{css,scss}": "npm run lint:css:fix"
